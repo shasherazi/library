@@ -39,3 +39,12 @@ h3 {
   color: #869aa4;
   text-decoration: underline;
 }
+
+.footer {
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  color: #555;
+  font-size: 0.7rem;
+}
