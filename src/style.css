@@ -57,6 +57,10 @@ h3 {
   box-shadow: 2px 5px 10px #ddd;
 }
 
+.book-div:hover {
+  box-shadow: 2px 5px 50px #bbb;
+}
+
 .book-title {
   margin: auto 0 0 0;
 }
