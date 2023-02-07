@@ -54,7 +54,7 @@ h3 {
   padding: 20px;
   border: 1px solid #eee;
   border-radius: 5px;
-  box-shadow: 0 0 5px #eee;
+  box-shadow: 2px 5px 10px #ddd;
 }
 
 .book-title {
