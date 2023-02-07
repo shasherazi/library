@@ -84,6 +84,11 @@ h3 {
   border-radius: 5px;
   background-color: #eee;
   font-size: 16px;
+  cursor: pointer;
+}
+
+.comment-btn:hover {
+  background-color: #ddd;
 }
 
 .like-container {
@@ -91,6 +96,15 @@ h3 {
   align-items: center;
   gap: 5px;
   white-space: nowrap;
+  cursor: pointer;
+}
+
+.like-btn.filled {
+  color: #fa3e3e;
+}
+
+.like-btn:hover {
+  font-size: 20px;
 }
 
 .hidden {
