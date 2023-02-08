@@ -4,6 +4,7 @@ const renderBooks = (book) => {
   const bookDiv = document.createElement('div');
   bookDiv.classList.add('book-div');
   bookDiv.innerHTML = `
+        <p class="book-id hidden">${book.id}</p>
         <img src="${book.formats['image/jpeg']}" alt="${book.title}">
         <h2 class="book-title">${book.title}</h2>
         <p class="book-author">${book.authors.length === 0 ? 'N/A' : book.authors[0].name}</p>
@@ -13,6 +14,7 @@ const renderBooks = (book) => {
             </button>
             <i class="fa-regular fa-heart empty"></i>
             <i class="fa-solid fa-heart filled hidden"></i>
+            <p class="likes">0</p>
         </div>
     `;
   bookSection.appendChild(bookDiv);
