@@ -6,17 +6,17 @@ const getLikes = async () => {
   return response.json();
 };
 
-// const sendLike = async (bookId) => {
-//   const response = await fetch(`${url}apps/${id}/likes/`, {
-//     method: 'POST',
-//     body: JSON.stringify({
-//       item_id: bookId,
-//     }),
-//     headers: {
-//       'Content-type': 'application/json; charset=UTF-8',
-//     },
-//   });
-//   return response.json();
-// };
+const addLike = async (bookId) => {
+  const response = await fetch(`${url}apps/${id}/likes/`, {
+    method: 'POST',
+    body: JSON.stringify({
+      item_id: bookId,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
+  return response;
+};
 
-export default getLikes;
+export { getLikes, addLike };

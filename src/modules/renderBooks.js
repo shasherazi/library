@@ -12,9 +12,11 @@ const renderBooks = (book) => {
             <button class="comment-btn">
                 Comment <i class="fa-solid fa-comments"></i>
             </button>
-            <i class="fa-regular fa-heart empty"></i>
-            <i class="fa-solid fa-heart filled hidden"></i>
-            <p class="likes">0</p>
+            <div class="like-container">
+                <i class="fa-regular fa-heart empty like-btn"></i>
+                <i class="fa-solid fa-heart filled hidden like-btn"></i>
+                <p class="likes">0</p>
+            </div>
         </div>
     `;
   bookSection.appendChild(bookDiv);
