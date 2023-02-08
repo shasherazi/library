@@ -1,3 +1,4 @@
+import booksCounter from './counters/booksCounter.js';
 import getBooks from './getBooks.js';
 import { addLike } from './involvementAPI/getLikes.js';
 import renderLikes from './involvementAPI/renderLikes.js';
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderBooks(book);
   });
   renderLikes();
+  document.querySelector('.main-books-counter').textContent = `(${booksCounter()})`;
 });
 
 booksSection.addEventListener('click', async (e) => {
