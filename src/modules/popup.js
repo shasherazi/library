@@ -1,5 +1,5 @@
-import addcomment from './addcomment.js';
-import getcomment from './getcomment.js';
+import addcomment from './involvementAPI/addcomment.js';
+import getcomment from './involvementAPI/getcomment.js';
 
 const body = document.querySelector('body');
 const pop = document.querySelector('.pop');
@@ -44,6 +44,7 @@ export default (button, books) => {
       </div>`;
       pop.appendChild(template);
 
+      // fill commments
       const mycoms = document.querySelector('.comments');
       if (fillcoms.length > 0) {
         fillcoms.forEach((com) => {
@@ -54,17 +55,21 @@ export default (button, books) => {
         });
       }
 
+      // Display No of Comments
       const count = document.querySelector('.com-count');
       if (fillcoms.length > 0) {
         count.innerHTML = `(${fillcoms.length})`;
       } else {
         count.innerHTML = '(0)';
       }
+
+      // add comment
       const comBtn = document.querySelector('#submit');
       const inp = document.querySelector('#name');
       const text = document.querySelector('#areatext');
       addcomment(comBtn, inp, text, currBook[0].id);
 
+      // close pop up
       const close = document.querySelector('.closeBtn > i');
       close.addEventListener('click', () => {
         pop.classList.add('inactive');
