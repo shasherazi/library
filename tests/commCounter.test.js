@@ -24,4 +24,29 @@ describe('commentCounter', () => {
     const newCount = commentCounter();
     expect(newCount).toBe(1);
   });
+
+  test('returns the correct count even if the comments have multiple classes', () => {
+    document.body.innerHTML = `
+            <li class="com-item com"></li>
+            <li class="com-item highlighted"></li>
+            <li class="com-item transparent"></li>
+            `;
+    expect(commentCounter()).toBe(3);
+  });
+
+  test('returns the correct count even if comments have an id', () => {
+    document.body.innerHTML = `
+            <li class="com-item" id="first"></li>
+            <li class="com-item" id="second"></li>
+            <li class="com-item" id="third"></li>`;
+    expect(commentCounter()).toBe(3);
+  });
+
+  test('returns the correct count even if links have nested anchor tags', () => {
+    document.body.innerHTML = `
+            <li class="com-item" id="first"><a href="/"></a></li>
+            <li class="com-item" id="second"><a href="/"></a></li>
+            <li class="com-item" id="third"><a href="/"></a></li>`;
+    expect(commentCounter()).toBe(3);
+  });
 });
