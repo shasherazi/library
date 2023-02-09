@@ -245,3 +245,7 @@ textarea:focus {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+.closeBtn:hover {
+  color: #f11;
+}
