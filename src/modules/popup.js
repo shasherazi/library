@@ -12,8 +12,8 @@ export default (button, books) => {
       pop.innerHTML = '';
       pop.classList.remove('inactive');
       const par = btn.parentElement.parentElement;
-      const title = par.querySelector('.book-title').innerHTML;
-      const currBook = books.filter((book) => book.title === title);
+      const id = par.querySelector('.book-id').innerHTML;
+      const currBook = books.filter((book) => book.id === Number(id));
       const fillcoms = await getcomment(currBook[0].id);
       const closebtn = document.createElement('a');
       closebtn.classList.add('closeBtn');
