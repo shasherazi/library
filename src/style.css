@@ -109,6 +109,7 @@ a {
   right: 5%;
   z-index: 1;
   background: white;
+  min-height: 97vh;
 }
 
 .container {
@@ -130,6 +131,7 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  text-align: left;
 }
 
 .description * {
@@ -138,7 +140,7 @@ a {
 
 .show-comments {
   display: flex;
-  margin-top: 2%;
+  margin-top: 5rem;
   align-items: center;
 }
 

@@ -8,5 +8,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderBooks(book);
   });
   const btn = document.querySelectorAll('.comment-btn');
-  popup(btn);
+  popup(btn, books.results);
 });
