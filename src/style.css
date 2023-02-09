@@ -66,9 +66,13 @@ a {
   box-shadow: 2px 5px 50px #bbb;
 }
 
+.main-heading {
+  margin: 20px 0 0 20px;
+}
+
 .main-books-counter {
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .book-title {
@@ -132,14 +136,16 @@ a {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  box-shadow: 5px 5px 5px black;
+  box-shadow: 5px 5px 500px black;
   position: fixed;
-  top: 7px;
+  top: 50%;
+  bottom: 50%;
   left: 5%;
   right: 5%;
+  margin:auto;
   z-index: 1;
   background: white;
-  min-height: 97vh;
+  height: 90vh;
 }
 
 .container {
