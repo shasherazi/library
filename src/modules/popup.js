@@ -16,7 +16,7 @@ export default (button, books) => {
       const fillcoms = await getcomment(currBook[0].id);
       const closebtn = document.createElement('a');
       closebtn.classList.add('closeBtn');
-      closebtn.innerHTML = '<i class="fa-regular fa-rectangle-xmark"></i>';
+      closebtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
       pop.appendChild(closebtn);
       const template = document.createElement('div');
       template.classList.add('container');
@@ -26,25 +26,25 @@ export default (button, books) => {
         <div class="details">
             <h1>${currBook[0].title}</h1>
             <div class="description">
-                <p>${currBook[0].authors.length === 0 ? 'N/A' : currBook[0].authors[0].name}</p>
-                <p>${currBook[0].bookshelves}</p>
-                <p>${currBook[0].subjects}</p>
+                <p><strong>Author:</strong> ${currBook[0].authors.length === 0 ? 'N/A' : currBook[0].authors[0].name}</p>
+                <p><strong>Bookshelves:</strong> ${currBook[0].bookshelves}</p>
+                <p><strong>Subjects:</strong> ${currBook[0].subjects}</p>
             </div>
         </div>
       </div>
       <div class="show-comments">
+        <h1 class="comments-heading">Comments<span class="com-count">(0)</span></h1>
         <ul class="comments"></ul>
         <form class="myform">
             <h1>Add a Comment</h1>
             <input id="name" type="text" placeholder="Your name" required>
             <textarea id="areatext" cols="30" rows="5" placeholder="Insights" required></textarea>
-            <button id="submit">Add Comment</button>
+            <button id="submit" class="comment-btn">Add Comment</button>
         </form>
       </div>`;
       pop.appendChild(template);
 
       const mycoms = document.querySelector('.comments');
-      mycoms.innerHTML = '<h1>Comments <span class="com-count">(0)</span></h1>';
       if (fillcoms.length > 0) {
         fillcoms.forEach((com) => {
           const link = document.createElement('li');

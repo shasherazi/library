@@ -142,98 +142,101 @@ a {
   bottom: 50%;
   left: 5%;
   right: 5%;
-  margin:auto;
+  margin: auto;
   z-index: 1;
   background: white;
   height: 90vh;
 }
 
 .container {
-  text-align: center;
-  padding: 2% 0;
+  display: flex;
+  align-items: center;
 }
 
 .book-details {
   display: flex;
+  flex: 1;
+  flex-direction: column;
   align-items: center;
   gap: 5%;
-  padding: 0 3%;
-  max-height: 25vh;
+  padding: 20px;
   justify-content: space-around;
-}
-
-.description {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  text-align: left;
 }
 
 .description * {
   min-width: 50%;
 }
 
+.details h1 {
+  text-align: center;
+}
+
 .show-comments {
   display: flex;
-  margin-top: 5rem;
+  flex-direction: column;
   align-items: center;
+  flex: 1;
 }
 
 .comments {
-  max-width: 35%;
-  margin: 0 auto;
-  padding: 5% 0;
+  background-color: #eee;
+  padding: 16px;
+}
+
+.comments-heading {
+  margin: 0;
+}
+
+.com-count {
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .com-item {
   list-style: none;
-  text-align: left;
-  margin-inline-start: -15%;
+  margin: 5px 0;
 }
 
 .myform {
   display: flex;
   flex-direction: column;
-  max-width: 20rem;
-  margin: 0 auto;
-  padding-inline-end: 8%;
+  align-items: center;
+  padding: 0 50px;
 }
 
 .myform * {
-  margin: 5% 0;
+  margin: 10px 0;
   border-radius: 5px;
+  width: 100%;
 }
 
-input {
+input,
+textarea {
   line-height: 30px;
-}
-
-#submit {
-  padding: 5%;
-}
-
-.inactive {
-  display: none;
+  border: 1px solid #ddd;
+  padding: 5px;
 }
 
 textarea {
   resize: none;
 }
 
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid #aaa;
+}
+
+.inactive {
+  display: none;
+}
+
 .noflow {
   overflow-y: hidden;
 }
 
-.closeBtn > i {
-  float: right;
-  position: relative;
-  top: 1vh;
-  right: 3%;
-  cursor: pointer;
-  font-size: 30px;
-}
-
-.book-details > img {
-  margin-top: 15%;
+.closeBtn {
+  align-self: flex-end;
+  padding: 10px 15px;
+  font-size: 1.5rem;
 }
