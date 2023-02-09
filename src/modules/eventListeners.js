@@ -2,6 +2,7 @@ import booksCounter from './counters/booksCounter.js';
 import getBooks from './getBooks.js';
 import { addLike } from './involvementAPI/getLikes.js';
 import renderLikes from './involvementAPI/renderLikes.js';
+import popup from './popup.js';
 import renderBooks from './renderBooks.js';
 
 const booksSection = document.querySelector('.books');
@@ -13,6 +14,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
   renderLikes();
   document.querySelector('.main-books-counter').textContent = `(${booksCounter()})`;
+  const btn = document.querySelectorAll('.comment-btn');
+  popup(btn, books.results);
 });
 
 booksSection.addEventListener('click', async (e) => {

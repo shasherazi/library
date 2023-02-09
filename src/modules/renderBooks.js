@@ -10,7 +10,9 @@ const renderBooks = (book) => {
         <p class="book-author">${book.authors.length === 0 ? 'N/A' : book.authors[0].name}</p>
         <div class="like-and-comment">
             <button class="comment-btn">
-                Comment <i class="fa-solid fa-comments"></i>
+                <a href="#pop-up">
+                  Comment <i class="fa-solid fa-comments"></i>
+                </a>
             </button>
             <div class="like-container">
                 <i class="fa-regular fa-heart empty like-btn"></i>
@@ -21,5 +23,4 @@ const renderBooks = (book) => {
     `;
   bookSection.appendChild(bookDiv);
 };
-
 export default renderBooks;

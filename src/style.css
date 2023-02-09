@@ -11,6 +11,11 @@ h3 {
   font-family: 'Roboto', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .nav {
   display: flex;
   justify-content: space-around;
@@ -121,4 +126,108 @@ h3 {
   width: 100%;
   color: #555;
   font-size: 0.7rem;
+}
+
+.pop {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 5px black;
+  position: fixed;
+  top: 7px;
+  left: 5%;
+  right: 5%;
+  z-index: 1;
+  background: white;
+  min-height: 97vh;
+}
+
+.container {
+  text-align: center;
+  padding: 2% 0;
+}
+
+.book-details {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  padding: 0 3%;
+  max-height: 25vh;
+  justify-content: space-around;
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.description * {
+  min-width: 50%;
+}
+
+.show-comments {
+  display: flex;
+  margin-top: 5rem;
+  align-items: center;
+}
+
+.comments {
+  max-width: 35%;
+  margin: 0 auto;
+  padding: 5% 0;
+}
+
+.com-item {
+  list-style: none;
+  text-align: left;
+  margin-inline-start: -15%;
+}
+
+.myform {
+  display: flex;
+  flex-direction: column;
+  max-width: 20rem;
+  margin: 0 auto;
+  padding-inline-end: 8%;
+}
+
+.myform * {
+  margin: 5% 0;
+  border-radius: 5px;
+}
+
+input {
+  line-height: 30px;
+}
+
+#submit {
+  padding: 5%;
+}
+
+.inactive {
+  display: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.noflow {
+  overflow-y: hidden;
+}
+
+.closeBtn > i {
+  float: right;
+  position: relative;
+  top: 1vh;
+  right: 3%;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.book-details > img {
+  margin-top: 15%;
 }
