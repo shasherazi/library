@@ -1,5 +1,6 @@
 import addcomment from './involvementAPI/addcomment.js';
 import getcomment from './involvementAPI/getcomment.js';
+import rendercomments from './rendercomments.js';
 
 const body = document.querySelector('body');
 const pop = document.querySelector('.pop');
@@ -46,14 +47,7 @@ export default (button, books) => {
 
       // fill commments
       const mycoms = document.querySelector('.comments');
-      if (fillcoms.length > 0) {
-        fillcoms.forEach((com) => {
-          const link = document.createElement('li');
-          link.classList.add('com-item');
-          link.innerHTML = `${com.creation_date} ${com.username} : ${com.comment}`;
-          mycoms.appendChild(link);
-        });
-      }
+      rendercomments(fillcoms, mycoms);
 
       // Display No of Comments
       const count = document.querySelector('.com-count');

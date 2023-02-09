@@ -1,3 +1,6 @@
+import rendercomments from '../rendercomments.js';
+import getcomment from './getcomment.js';
+
 export default (button, username, sc, bookId) => {
   button.addEventListener('click', async (e) => {
     e.preventDefault();
@@ -19,5 +22,10 @@ export default (button, username, sc, bookId) => {
     }
     username.value = '';
     sc.value = '';
+
+    // rendercomments after update
+    const fillcoms = await getcomment(bookId);
+    const mycoms = document.querySelector('.comments');
+    rendercomments(fillcoms, mycoms);
   });
 };
