@@ -74,7 +74,7 @@ This project was built using these technologies.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Under construction
+- [Here](https://shasherazi.github.io/library/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
