@@ -181,6 +181,10 @@ a {
 .comments {
   background-color: #eee;
   padding: 16px;
+  margin: 0 16px;
+  max-height: 70px;
+  word-break: break-word;
+  overflow-y: scroll;
 }
 
 .comments-heading {
@@ -194,7 +198,7 @@ a {
 
 .com-item {
   list-style: none;
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 .myform {
@@ -239,4 +243,5 @@ textarea:focus {
   align-self: flex-end;
   padding: 10px 15px;
   font-size: 1.5rem;
+  cursor: pointer;
 }
